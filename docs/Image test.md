@@ -1,7 +1,1 @@
-
-![[docs/assets/Pasted image 20240611194129.png]]
-
-
-![[assets/Pasted image 20240611194129.png]]
-
-
+![](docs/assets/Pasted%20image%2020240611195356.png)
