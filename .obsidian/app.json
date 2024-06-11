@@ -1,3 +1,4 @@
 {
-  "attachmentFolderPath": "docs"
+  "attachmentFolderPath": "./assets",
+  "newLinkFormat": "relative"
 }

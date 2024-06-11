@@ -16,4 +16,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-![[Pasted image 20240611134012.png]]
+![[assets/Pasted image 20240611140817.png]]
