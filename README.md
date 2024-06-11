@@ -5,3 +5,7 @@
 
 Pasted via obsidian
 ![[assets/Pasted image 20240611194513.png]]
+
+
+Hand crafted:
+![](assets/Pasted image 20240611194513.png)
