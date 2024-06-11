@@ -1,4 +1,5 @@
 site_name: Peter's Doc Site
 site_url: https://peterhissey.github.io/
+docs_dir: docs/
 theme:
   name: material
