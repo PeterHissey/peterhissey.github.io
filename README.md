@@ -8,4 +8,4 @@ Pasted via obsidian
 
 
 Hand crafted:
-![](./assets/Pasted image 20240611194513.png)
+![](assets/Pasted image 20240611194513.png)
