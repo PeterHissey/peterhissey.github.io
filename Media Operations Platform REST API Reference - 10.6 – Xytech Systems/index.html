@@ -1,0 +1,1874 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://peterhissey.github.io/Media%20Operations%20Platform%20REST%20API%20Reference%20-%2010.6%20%E2%80%93%20Xytech%20Systems/">
+      
+      
+        <link rel="prev" href="../Image%20test/">
+      
+      
+        <link rel="next" href="../Pasted/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Media Operations Platform REST API Reference 10.6 – Xytech Systems - Peter's Doc Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Peter&#39;s Doc Site" class="md-header__button md-logo" aria-label="Peter's Doc Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Peter's Doc Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Media Operations Platform REST API Reference   10.6 – Xytech Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Peter&#39;s Doc Site" class="md-nav__button md-logo" aria-label="Peter's Doc Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Peter's Doc Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GL%20Accounts%20Search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GL Accounts Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Image%20test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Media Operations Platform REST API Reference   10.6 – Xytech Systems
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Media Operations Platform REST API Reference   10.6 – Xytech Systems
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-whats-new-in-v106" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of what's new in v10.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features and Benefits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xytech-platform-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xytech Platform REST API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-data-model-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      High level data model diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-api-v1-and-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST API v1 and v2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="REST API v1 and v2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deprecation-of-v1-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecation of v1 API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-features-in-v2-api-as-of-platform-v102-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Features in v2 API (as of Platform v10.2 release)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-the-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the REST API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting to the REST API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licensing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-information-you-will-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Information You Will Need
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swagger-api-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swagger API Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swagger API Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-versions-prior-to-v102" class="md-nav__link">
+    <span class="md-ellipsis">
+      For versions prior to v10.2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-postman-as-a-test-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Postman as a test client
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Postman as a test client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-curl-as-a-test-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using cURL as a test client
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-fields-in-the-payload-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key fields in the payload structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-postman-collection-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Postman Collection calls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-update-datetime-fields-to-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH - update datetime fields to 'null'
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-url-encoding-of-special-characters-eg-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIP: URL encoding of special characters e.g. % and +
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultcolumns-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      resultColumns parameter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saveargument" class="md-nav__link">
+    <span class="md-ellipsis">
+      saveArgument
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saveargument-bidapproval0" class="md-nav__link">
+    <span class="md-ellipsis">
+      SaveArgument : {"BidApproval":"0"}
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternatekeyhandling" class="md-nav__link">
+    <span class="md-ellipsis">
+      alternatekeyhandling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nullvaluehandling" class="md-nav__link">
+    <span class="md-ellipsis">
+      nullvaluehandling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-time-zone-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source-Time-Zone-Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-using-post-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH Using POST Payload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-using-list-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH using List endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-field-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Field handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a-endpoint-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix A – Endpoint List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-b-swagger-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix B – Swagger Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pasted/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pasted
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Untitled/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Untitled
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Details
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Details
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/A%20pageed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A pageed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../details/New%20note%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New note 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-whats-new-in-v106" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of what's new in v10.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features and Benefits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xytech-platform-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xytech Platform REST API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-data-model-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      High level data model diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-api-v1-and-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST API v1 and v2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="REST API v1 and v2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deprecation-of-v1-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecation of v1 API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-features-in-v2-api-as-of-platform-v102-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Features in v2 API (as of Platform v10.2 release)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-the-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the REST API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting to the REST API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licensing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-information-you-will-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Information You Will Need
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swagger-api-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swagger API Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swagger API Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-versions-prior-to-v102" class="md-nav__link">
+    <span class="md-ellipsis">
+      For versions prior to v10.2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-postman-as-a-test-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Postman as a test client
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Postman as a test client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-curl-as-a-test-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using cURL as a test client
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-fields-in-the-payload-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key fields in the payload structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-postman-collection-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Postman Collection calls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-update-datetime-fields-to-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH - update datetime fields to 'null'
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-url-encoding-of-special-characters-eg-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIP: URL encoding of special characters e.g. % and +
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultcolumns-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      resultColumns parameter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saveargument" class="md-nav__link">
+    <span class="md-ellipsis">
+      saveArgument
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saveargument-bidapproval0" class="md-nav__link">
+    <span class="md-ellipsis">
+      SaveArgument : {"BidApproval":"0"}
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternatekeyhandling" class="md-nav__link">
+    <span class="md-ellipsis">
+      alternatekeyhandling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nullvaluehandling" class="md-nav__link">
+    <span class="md-ellipsis">
+      nullvaluehandling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-time-zone-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source-Time-Zone-Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-using-post-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH Using POST Payload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-using-list-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH using List endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST method
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-field-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Field handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a-endpoint-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix A – Endpoint List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-b-swagger-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix B – Swagger Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Media Operations Platform REST API Reference   10.6 – Xytech Systems</h1>
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>This document describes the Media Operations Platform REST API, which is the interface by which a third-party component can make REST calls over HTTP to the Platform application server endpoint and receive responses from it. It does not cover any of the following topics:</p>
+<ul>
+<li>Web Hooks – please refer to the following article called <a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/20338332222107">Webhooks user guide 10.4.</a> </li>
+<li>The Platform SOAP API</li>
+<li>Platform Service Order Adapters</li>
+<li>Other outbound interfaces, such as alternate authentication systems.<br />
+    Although most of this document is relevant to the v1 API, it also includes features that only exist in the v2 API and are primarily intended for users of the v2 API.</li>
+</ul>
+<h2 id="summary-of-whats-new-in-v106">Summary of what's new in v10.6</h2>
+<ul>
+<li>Swagger documentation now includes the <a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/21789230412571-Media-Operations-Platform-REST-API-Reference-10-6#h_01HF36JJ5WR17BWBNHKZZCCQR1">PATCH method using a POST payload</a>.</li>
+<li>Swagger includes example payloads for sub-tables (previously not populated).</li>
+<li>Swagger now includes <a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/21789230412571-Media-Operations-Platform-REST-API-Reference-10-6#h_01HF40NRXV8NZWCRJ5PV9TMSZ1">PATCH method for list documents.</a></li>
+<li>Other Swagger improvements and correct missing parameter fields.</li>
+<li>Additional header <a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/21789230412571-Media-Operations-Platform-REST-API-Reference-10-6#h_01HKSPJS614F0QQG81TQQDCZ24">parameters for optimization and filtering</a><ul>
+<li><a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/21789230412571-Media-Operations-Platform-REST-API-Reference-10-6#h_01HKSQ234JHJYHVREZWD7C867W">Ignore alternate keys</a></li>
+<li><a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/21789230412571-Media-Operations-Platform-REST-API-Reference-10-6#h_01HKSQ339VZTSRBSD25DCPTR8A">Omit null values</a></li>
+<li><a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/21789230412571-Media-Operations-Platform-REST-API-Reference-10-6#h_01HF434Z8JY77TBZKP9TZXEN8A">Filter results for maintenance documents</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="definitions"><strong>Definitions</strong></h2>
+<table><tbody><tr><td><span><strong>Platform</strong></span></td><td><span><strong>Media Operations Platform application&nbsp;</strong></span></td></tr><tr><td>API</td><td>Application Program Interface is a set of functions or procedures offered by a host system that allows one or more applications, services, or systems to send information to, request information from, or make changes to the host system.</td></tr><tr><td>REST</td><td>Representational State Transfer is an architectural style of principles that define a set of constraints for how two systems can communicate over a network such as the World Wide Web. The REST architecture is described in <a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/20339398168219#h_01HF387Q6QAWSQ2EZMVZPAYQ1J">REST Basics</a></td></tr><tr><td>Verb</td><td>In REST, this is the programmatic method used to initiate an API command, usually GET, PUT, POST, or DELETE. See also <a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/20339398168219#h_01HF42TTJMW7WJRZ5CQ9GZMFSB">HTTP Methods</a> for more information.</td></tr><tr><td><br>Swagger</td><td>A third-party tool that generates API documentation automatically based on the Open API specification. It presents a browsable, usable Web site as a URL within the API Web service. See also Open API.</td></tr><tr><td>cURL</td><td>cURL is a mechanism for transferring data using networking protocols. It is provided in two ways:<br>• As a command line tool that allows a user to submit requests directly and see the results, usually for testing purposes.<br>• As a library with integrations to several common programming languages, including C++, C#, PHP, and others.</td></tr><tr><td>Model</td><td>A collection of properties, usually defined as name/value pairs or collections of name/value pairs, that make up a document or a portion of a document. An API may accept one or more models as input, to create a new record or modify an existing record using all the specified values. An API may also provide one or more models as output, either as a list of identical models (e.g., retrieving multiple records as part of a list document) or as a collection of related models (e.g., retrieving all models related to a particular Job document).</td></tr><tr><td>Postman</td><td><p>A third-party platform for building and testing APIs; the Postman client application is available on several operating systems and provides a set of tools to test API calls without having to write code and helps debug API calls and response payloads. <a href="https://www.postman.com/">https://www.postman.com/</a></p></td></tr><tr><td>OAS,<br>OpenAPI</td><td>Formerly known as Swagger Specification, the OpenAPI Specification (OAS) defines a standard interface to RESTful APIs. This language-agnostic interface can then be used by code generation, documentation generation, and testing tools to access and understand the underlying API.&nbsp;<br>Refer to <a href="https://swagger.io/specification/" target="_blank" rel="noopener noreferrer">https://swagger.io/specification/</a> for more information.</td></tr></tbody></table>
+
+<h2 id="api-basics"><strong>API Basics</strong></h2>
+<p>This section describes the fundamental ideas behind APIs, the REST protocol, and the portions of the Platform system involved.</p>
+<p>The purpose of an application program interface (API) is to allow an external computer or piece of software (here called an endpoint) to interact with the system that exposes the interface (here called the host), to allow the endpoint to do one or more of the following:</p>
+<ul>
+<li>Create new records in the host system</li>
+<li>Retrieve information from the host system</li>
+<li>Update existing records in the host system</li>
+<li>Delete existing records in the host system</li>
+<li>Trigger operations or business logic in the host system</li>
+</ul>
+<p>Unlike a user interface, an API is a mechanism for one piece of software to talk to another and usually does not require the action of a person. In some cases, however, an API is used to allow a third-party user interface to interact with the host system.</p>
+<h4 id="rest-basics"><strong>REST Basics</strong></h4>
+<p>Representational State Transfer (REST) is an architectural style of principles that define a set of constraints for how two systems can communicate over a network such as the World Wide Web. These principles are used to create reliable Web APIs where no state information needs to be retained by the host system offering the API.</p>
+<h4 id="features-and-benefits"><strong>Features and Benefits</strong></h4>
+<p>The REST architecture provides the following benefits:</p>
+<ul>
+<li>
+<ul>
+<li>Simple – In general, REST calls follow a set of common patterns that can be learned and followed without significant amounts of special syntax.</li>
+<li>Stateless - Being “stateless” allows the API provider to handle high volumes of requests with high performance.<ul>
+<li>The server is not required to keep state information in memory.</li>
+<li>The client is not required to connect to a specific server to utilize stored state information, so requests can be distributed among any number of servers.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="http-methods"><strong>HTTP Methods</strong></h4>
+<p>RESTful services utilize HTTP methods to differentiate between different types of API calls.</p>
+<table><tbody><tr><td><span><strong>Verb</strong></span></td><td><span><strong>Communi</strong><strong>ty Used For</strong></span></td></tr><tr><td>GET&nbsp;</td><td>Usually retrieves a representation of the resource’s current state, such as performing a simple query that gathers and returns information about one or more resources (e.g., database records) from the host system.<br>In the Platform API, GET commands are used to retrieve setup documents, maintenance documents, or list documents.<br>Examples include:<br>Retrieving a list of all records of a certain document type, such as all Bids, all Jobs, or all Contacts in the system,<ul><li>Retrieving a list of all records of a certain document type that match specified criteria, such as all Bids that start in the current year, all Jobs associated with a specific Client, or all Contacts whose names begin with the letter A, or</li><li>Retrieving a specific record of a certain document type, such as all the properties of a Job with a specific Job ID.</li></ul>Note: A GET command is entirely contained within the URI sent to the endpoint. As a result, there is a limit on the amount of text that can be sent to the API, so GET commands usually do not support a significant amount of search or filter criteria.</td></tr><tr><td>PATCH</td><td>Patch usually updates an existing state with a specified one using partial information. See also PUT to completely replace an existing state, and POST for updating an existing state in some cases. In the Platform API, usually updates an existing record, such as<br>changing the mailing address of a Contact or changing the status of a Job.</td></tr><tr><td>POST</td><td>Post usually processes the representation provided with the request to create a new representation or update an existing representation.&nbsp;<br>In the Platform API, POST commands are usually used to create new records, such as adding a new resource or creating a new Job.</td></tr><tr><td>PUT</td><td>Put usually updates an existing record by completely replacing an existing state with a specified one or creating a new state where the URI is already known. See also PATCH to replace only a portion of an existing state. In the Platform API, PUT commands will be used to perform upsert calls from v11; refer to POST commands for creating new items or PATCH commands for updating existing items.</td></tr><tr><td>DELETE</td><td>Delete commands are usually used to permanently remove existing records from the host system.&nbsp;<br>Note: DELETE commands should be used sparingly; to both preserve data integrity and provide historical information, it is usually recommended to change the Status of a record instead of deleting the record completely.</td></tr></tbody></table>
+
+<p><strong>Response Codes</strong></p>
+<p>REST services are built on top of the HTTP protocol, so calls to the REST service generate HTTP response codes. In many cases, the HTTP response code will be accompanied by additional information in the header or body of the message. In some cases, the HTTP response code may be the only response.</p>
+<table><tbody><tr><td><span><strong>Response Code&nbsp;</strong></span></td><td><span><strong>Description</strong></span></td></tr><tr><td><strong>2xx range&nbsp;</strong></td><td><strong>Success Codes</strong></td></tr><tr><td>200 Ok</td><td>The call was successful. In most cases, there will be additional information returned by the API in the body of the message, such as the matching record(s) for a query, or the ID of a record created, modified, or deleted by a corresponding API call.</td></tr><tr><td>204 No Content</td><td>The server has fulfilled the request but does not need to return a response body. The server may return the updated meta information.</td></tr><tr><td><strong>4xx range&nbsp;</strong></td><td><strong>Client Error</strong></td></tr><tr><td>400 Bad Request</td><td>The call was not successful due to an error in the URL or the syntax of the API call. Check the syntax of the API call to make sure there are no invalid characters.</td></tr><tr><td>401 Unauthorized</td><td>The call was not successful because the API requires a valid<br>credentials, and they were not provided as part of the call.<br>Response Code Description Verify that the call is providing login information in an acceptable manner.</td></tr><tr><td>404 Not Found</td><td>The call was not successful because the service could not find the requested API. Check the URL for any mismatches between the API call being sent and the documented API signature.</td></tr><tr><td><strong>5xx range&nbsp;</strong></td><td><strong>Server Error</strong></td></tr><tr><td>500 Internal Server Error</td><td>The call was not successful because it caused an error in the service during processing, such as providing an incorrect data type for a given property/field. Verify that all parameters are correct, and values are valid.</td></tr><tr><td>502 Bad Gateway</td><td>The call was not successful because the service got an invalid response from the API. Verify that all parameters are correct, and values are valid.</td></tr></tbody></table>
+
+<p>For more information refer to the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">appropriate section of the HTTP protoco</a>l or a developer resource for HTTP status codes, such as the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">MDN Web Docs.</a></p>
+<h2 id="xytech-platform-rest-api"><strong>Xytech Platform REST API</strong></h2>
+<p>The Platform is, at a fundamental level, a system that deals with creating, updating, and utilizing a particular type of data object referred to as a document.</p>
+<ul>
+<li>Each Platform document is a representation of a database table or collection of database tables.<ul>
+<li>Each document has a primary table and may have one or more sub-tables.</li>
+<li>All sub-tables are children of the primary table, and a sub-table can have one or more child sub-tables.</li>
+</ul>
+</li>
+<li>Each document is one of the following types of documents:<ul>
+<li><strong>Setup -</strong> generally describes a single item, and usually only contains a primary table. Setup documents are often used to manage simple items used to generate lists of options in other documents, such as status labels or predefined sets of codes.</li>
+<li><strong>Maintenance</strong> – generally describes either master data (which are used in transactional data) or transactional data. Maintenance documents often contain one or more sub-tables.</li>
+<li><strong>List</strong> documents provide access to sets of other records, such as Setup and Maintenance documents.</li>
+</ul>
+</li>
+</ul>
+<p>The Platform REST API is JSON-based and has Open API v3.0 API specifications for each API call available in YAML. These specifications can be retrieved as a plain YAML file and are also readily available to be viewed in a browser through the Swagger UI. See the Error! Reference source not found. below for more information.</p>
+<h2 id="high-level-data-model-diagram"><strong>High level data model diagram</strong></h2>
+<p>This diagram provides you with a high-level understanding of the primary Xytech Platform data objects and how they relate.</p>
+<p>Below the name of each data object is the REST API endpoint used for accessing the data object. Where ~/ is prefixed before the endpoint, that indicates it is a sub-table endpoint of the primary endpoint. See the Swagger documentation for full details.</p>
+<h2 id="_1"><strong><img alt="MediaPulse primary data objects-Summary.drawio.png" src="21936200667675.png" /></strong></h2>
+<h2 id="rest-api-v1-and-v2"><strong>REST API v1 and v2</strong></h2>
+<h4 id="deprecation-of-v1-api"><strong>Deprecation of v1 API</strong></h4>
+<ul>
+<li>REST API v1 was the first Xytech REST API product. It had limitations that required breaking changes to improve so v2 was made available from Xytech v9.4 release with improved functionality.</li>
+<li>REST API v1 will no longer be supported in version 11.0 and beyond.</li>
+<li>All new integrations should use v2 API and existing integrations should port to v2</li>
+<li>To use v2 API, change the base URL version number from ../v1/.. to ../v2/..</li>
+</ul>
+<h4 id="additional-features-in-v2-api-as-of-platform-v102-release"><strong>Additional Features in v2 API (as of Platform v10.2 release)</strong></h4>
+<ul>
+<li><strong>Payload structure is enhanced and updated to be more robust and scalable.</strong><br />
+    The document name is now always added as the root element of the payload with an array containing the details. </li>
+</ul>
+<p><em>Example showing the additional root element jm_job:<br />
+</em></p>
+<table><tbody><tr><td><strong>API V1 JSON payload for GET JmJob</strong></td><td><p><strong>API V2 JSON payload for GET JmJob</strong></p></td></tr></tbody></table>
+
+<table><tbody><tr><td><p>/JmJob/job_no=11261</p><div><p><img src="Media%20Operations%20Platform%20REST%20API%20Reference%20-%2010.6%20%E2%80%93%20Xytech%20Systems/21892325750043.png" alt="Picture4.png"></p></div></td><td><p>/JmJob/job_no=11261</p><div><p><img src="Media%20Operations%20Platform%20REST%20API%20Reference%20-%2010.6%20%E2%80%93%20Xytech%20Systems/21892325781275.png" alt="Picture5.png" width="305" height="310"></p></div></td></tr></tbody></table>
+
+<ul>
+<li>
+<ul>
+<li>See the Swagger documentation for details of the JSON structure for each endpoint.</li>
+</ul>
+</li>
+<li>
+<p><strong>Additional PATCH capabilities<br />
+</strong>In addition to the existing v1 PATCH method where each changed field must be defined using the operation/path/value payload structure, you can now use the same JSON payload you would use for a POST call to update a record. This needs to use the header 'Content-Type: application/json-patch+json'. <a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/21789230412571-Media-Operations-Platform-REST-API-Reference-10-6#h_01HF36JJ5WR17BWBNHKZZCCQR1">See the section below for more details.</a></p>
+</li>
+<li>
+<p><strong>Pagination &amp; sorting<br />
+</strong>API Pagination has been added to the REST API ‘Get’ Query for Lists.<br />
+<strong>Parameters for:</strong></p>
+<p><table><tbody><tr><td><p><strong>pageSize&nbsp;</strong></p></td><td>are the number of records returned per page.&nbsp;</td></tr><tr><td><strong>page</strong></td><td>are the page number to return.&nbsp;</td></tr><tr><td><p><strong>sort</strong>&nbsp;</p></td><td>is the field to sort by followed by ascending or descending order.&nbsp;</td></tr></tbody></table></p>
+<p>Example:<br />
+To return the first 10 records on page 1 sorted by product_no:<br />
+GET<br />
+{server}}/JmOrgProductList?query="active":"Y"}&amp;resultColumns="L":"product_no","product_desc"]}&amp;sort="product_no_desc"]&amp;pageSize=10&amp;page=1</p>
+<p>This will allow sites to call for data in manageable payloads without exceeding memory limitations.</p>
+</li>
+</ul>
+<h2 id="connecting-to-the-rest-api"><strong>Connecting to the REST API</strong></h2>
+<h4 id="licensing"><strong>Licensing</strong></h4>
+<p>While there is a specific license point for the REST API, by default all Platform installations are given access to the API.</p>
+<p>The REST API is a component of the Platform’s Application Server. On hosted systems, it is available by default to all customers.</p>
+<h4 id="instance-information-you-will-need"><strong>Instance Information You Will Need</strong></h4>
+<p>To be able to connect with the REST API, you will need to know the instance:</p>
+<ul>
+<li>Base URL e.g. ‘https://example.com’ (The same base url you use to access your system)</li>
+<li>Database name e.g. ‘DEMO1’</li>
+</ul>
+<p>For systems installed prior to mid 2023, you may also require the port number. All later systems are now setup with a proxy to avoid the need to know the port number.</p>
+<p>If you do not have this information, please contact Xytech Technical Support.</p>
+<h2 id="swagger-api-documentation"><strong>Swagger API Documentation</strong></h2>
+<p>From Platform version v10.2, a Swagger index page has been introduced to assist in the navigation and creation of Swagger YAML documentation. The Swagger index page can be found by entering the base URL you use for accessing the Platform and adding “/ApiDocs” to the end (e.g., www.xytechexample.com/XYT_TEST/ApiDocs). The Xytech API Index page is displayed. </p>
+<p><img alt="" src="21789230401563.png" /></p>
+<p><strong>Using the Index</strong><br />
+The Index is comprised of the following areas:</p>
+<ul>
+<li>Version: Displayed in the upper left corner of the screen. This shows the API version, currently either v1 or v2.</li>
+<li>Selected Database: The name of the database currently selected for this host.<br />
+    Only modules for that database are shown.</li>
+<li>Available Databases: (Where multiple databases exist on the same host) Click a database to select it and view its associated modules.</li>
+<li>Filter Documents: Enter text into this field and press [Enter] to only display matching document descriptions. To clear the filter, delete the text and press [Enter].</li>
+<li>Module and Document List: Only modules in the selected database are displayed. Click any Module to expand and show the documents it contains. Each document has a label that describes its type (Document [maintenance], List, or Setup).</li>
+</ul>
+<h4 id="for-versions-prior-to-v102"><strong>For versions prior to v10.2</strong></h4>
+<p>For versions prior to v10.2 you will need to generate the Swagger documentation manually for each document endpoint.</p>
+<p>Use a browser to generate the Swagger document:</p>
+<p>http://{host}:{port}/API/v2/database/{db_name}/spec/{docName}</p>
+<p>For example:</p>
+<p>http://myhost:8088/API/v2/database/mp10/spec/JmJob</p>
+<p>The above URL will generate the Swagger document and then display the Swagger document.</p>
+<p>To display generated Swagger documents, browse to:</p>
+<p>http://{host}:{port}/REST/SwaggerUI/dist/index.html?document={docName}_v2</p>
+<p>For example:</p>
+<p>http://myhost:8088/REST/SwaggerUI/dist/index.html?document=JmDivision_v2</p>
+<h2 id="authentication"><strong>Authentication</strong></h2>
+<p>The REST API currently uses Basic Authentication and will require a database login account.<br />
+Always use HTTPS encrypted protocol when communicating with the REST API to ensure credentials are not passed in clear text.</p>
+<h2 id="using-postman-as-a-test-client"><strong>Using Postman as a test client</strong></h2>
+<p>This section describes using the third-party Postman application as an API client for testing and troubleshooting purposes. The example uses the JmJob (Job) endpoint.</p>
+<p><strong>To execute a GET call to retrieve an existing record:</strong></p>
+<ol>
+<li>Open the Postman application</li>
+<li>From File click New and click HTTP Request</li>
+<li>Leave the method as GET</li>
+<li>Enter the URL:  <ul>
+<li>http://{base_url}/API/v2/database/{dbname}/jmJob/job_no=100 <ul>
+<li>Replace {base_url} &amp; {dbname} with your base URL &amp; database name and provide a valid Job Number that exists in your instance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>On the Authorization tab, set Type to Basic Auth and enter a valid username and password, e.g. xytech/xytechpw</li>
+<li>Click Send and observe the response.</li>
+</ol>
+<p><strong>To execute a POST call to create a new record:</strong> </p>
+<ol>
+<li>Open the Postman application.</li>
+<li>From <strong>File</strong> click <strong>New</strong> and click <strong>HTTP Request</strong>.</li>
+<li>Change the method to <strong>POST</strong>.</li>
+<li>Add a Header:<ul>
+<li>Key: <strong>Content-Type</strong></li>
+<li>Value: <strong>application/json</strong></li>
+</ul>
+</li>
+<li>Enter the URL: http://{base_url}/API/v2/database/{dbname}/jmJob</li>
+<li>On the Authorization tab, set <strong>Type</strong> to Basic Auth and enter a valid username and password, e.g. xytech/xytechpw</li>
+<li>On the Body tab, set the type to <strong>json,</strong> and provide a valid JSON object with the minimum fields to create a job. For example, to create a simple Job:</li>
+</ol>
+<p>{</p>
+<p>"jm_job": [</p>
+<p>{</p>
+<p>"cust_id": {</p>
+<p>"list_id": "409"</p>
+<p>},</p>
+<p>"job_desc": "Passing Fancy",</p>
+<p>"job_no": {</p>
+<p>"job_no": -1</p>
+<p>},</p>
+<p>"job_type_no": {</p>
+<p>"job_type_no": 11</p>
+<p>}</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p><strong>NOTES</strong>:</p>
+<ul>
+<li>
+<ul>
+<li>To generate the primary key job_no, set the value to -1.<br />
+        When creating multiple sub-records in a single call, subsequent records must advance the primary key ID by -1. E.g -1, -2, -3 etc…</li>
+<li>Be aware some fields are mandatory such as Job Type (job_type_no) and Customer ID (list_id).</li>
+<li>Numeric values will be accepted with or without quotes.</li>
+</ul>
+</li>
+</ul>
+<p>8. Click <strong>Send</strong> and observe the response with status code 200 (success with response body).</p>
+<p>The id of the created record is returned in a header parameter called 'Location'.</p>
+<p><em>In v10.6 SP1 a response payload will contain the ID(s) of newly created records.</em></p>
+<p><strong>To execute a DELETE call to remove an existing record:</strong></p>
+<ol>
+<li>Open the Postman application.</li>
+<li>From <strong>File</strong> click <strong>New</strong> and click <strong>HTTP Request</strong>.</li>
+<li>Change the method to <strong>DELETE</strong>.</li>
+<li>Enter the URL:<br />
+    http://{base_url}/api/v2/database/{dbname}/JmJob/job_no=67982</li>
+<li>On the Authorization tab, set <strong>Type</strong> to Basic Auth and enter a valid username and password, e.g. xytech/xytechpw</li>
+<li>Click <strong>Send</strong> and observe the response with status code 204 (success with no response body).</li>
+</ol>
+<h4 id="using-curl-as-a-test-client"><strong>Using cURL as a test client</strong></h4>
+<p>This section describes using the third-party cURL command line utility as an API client for testing and troubleshooting purposes. </p>
+<p>Many REST clients (either via an online tool or desktop application) use a lightweight program called curl to interact over many different types of network protocols (including HTTP, HTTPS, FTP, IMAP, etc.) Windows users may use the curl command from the Command Prompt to call teh REST API and output dumps of useful data.</p>
+<p>Curl is included with Windows v10 1803 and later.</p>
+<p><em>Example curl on Windows to fetch job details and download the response to a file (replace credentails, base url and database name with your values</em>:</p>
+<pre><code>curl -u xytech:password &lt;a href=&quot;https://{base/&quot;&gt;https://{base_&lt;/a&gt;url}/api/v2/database/{database name}/JmJob/job_no=342 -H &quot;Accept: application/json&quot; &amp;gt;c:\temp\ApiResponse.txt
+</code></pre>
+<h2 id="key-fields-in-the-payload-structure"><strong>Key fields in the payload structure</strong></h2>
+<ul>
+<li>The nested sub-group identified by the primary key field name, provides all the key fields of a document. As a minimum, this sub-group always contains the primary key field and an 'external key' field.</li>
+</ul>
+<p><em>Example shows a section of the Work Order's (jm_work_order) key fields in the sub-group wo_no_seq.</em></p>
+<p>{</p>
+<p>"jm_work_order": [</p>
+<p>{</p>
+<p>"wo_no_seq": {</p>
+<p>"wo_no_seq": "2627-1",</p>
+<p>"external_key": null</p>
+<p>},</p>
+<p>"custom_field_data_no": 63888,</p>
+<p>"wo_desc": "Dscription2",</p>
+<p>"wo_desc_2": null,</p>
+<p>...</p>
+<ul>
+<li>
+<ul>
+<li>In the above example wo_no_seq and external_key are the two key fields that can be used in lookup requests.</li>
+<li>Some documents may have additional key fields such as Media Assets (known by the document name lib_master) See example below.</li>
+</ul>
+</li>
+</ul>
+<p><em>Example Media Asset document where there are additional key fields for 'barcode' &amp; 'umid' in the 'master_no' group.</em></p>
+<p>{</p>
+<p>"lib_master": [</p>
+<p>{</p>
+<p>"master_no": {</p>
+<p>"master_no": 53,</p>
+<p>"barcode": "1838",</p>
+<p>"external_key": null,</p>
+<p>"umid": null</p>
+<p>},</p>
+<p>"cust_id": {</p>
+<p>"list_id": "23",</p>
+<p>"other_cust_id": null,</p>
+<p>"cust_reference": null,</p>
+<p>"external_key": null,</p>
+<p>"cust_id": "23"</p>
+<p>},</p>
+<p>"customer_name": "Gotta Dance Productions",</p>
+<p>"master_desc": "A Winter's Tale",</p>
+<p>"barcode": "1838",</p>
+<p>"container_master_no": null,</p>
+<p>...</p>
+<ul>
+<li>External key fields exist on all documents and are designed to be used by external systems to store the external system's unique identifier for the record. The external key field can then be used in future look-ups as opposed to the external system having to know the Xytech key field value..</li>
+</ul>
+<h2 id="example-postman-collection-calls"><strong>Example Postman Collection calls</strong></h2>
+<p>An extensive set of example API calls is available via the <a href="https://www.postman.com/xytech-product-team/workspace/xytech-platform-public/collection/25646735-19fb63a8-470d-460d-9eea-d23248239302?action=share&amp;creator=25646735">Platform’s REST API Postman Collection</a>. This collection contains example calls for three types of documents (maintenance, list, and setup). </p>
+<p>We suggest forking the collection to your own workspace which enables you to 'pull' for updates as teh collection grows.</p>
+<h2 id="patch-update-datetime-fields-to-null"><strong>PATCH - update datetime fields to 'null'</strong></h2>
+<p>It may seem like an obvious approach to use the 'update' operation with a value of 'null' to clear a datetime field, but datetime fields will not get set to null in that way.</p>
+<p>The only way to 'null' a datetime field is by using the 'remove' operation.</p>
+<p>Example PATCH payload that set's a datetime field to 'null':</p>
+<p>[</p>
+<p>{</p>
+<p>"op": "remove",</p>
+<p>"path": "goodnight_date",</p>
+<p>"value": null</p>
+<p>}</p>
+<p>]</p>
+<h2 id="query-parameters"><strong>Query parameters</strong></h2>
+<p><strong>GET</strong> and <strong>PATCH</strong> List endpoints support query parameters.</p>
+<p>This section describes the syntax and options used for the query parameter. This is a mandatory parameter for List documents.</p>
+<p>The general format for a “query” parameter is to add the parameter as <em>query={}</em> to the end of a GET request for a List document after the parameter delimiter (“?”), where the value of query= is a JSON object:</p>
+<p>http://{base_url}/documentList?query={key: value}</p>
+<p>Such as:</p>
+<p>http://{base_url}/jmJobList?query={"job_no": "12345"<a href="http://base_url/jmJobList?query={%22job_no%22:%2212345%22}">}</a></p>
+<p><strong>Note:</strong> The query parameter is supported only for GET and PATCH requests for List type documents and is <strong>not</strong> supported by GET requests for Setup or Maintenance documents.</p>
+<p>In the simplest form, the value is a single piece of information, such as a string or integer. In more complex forms, the value is a JSON object containing specific formats as described below.</p>
+<p>In these examples below, the <em>baseurl</em> is assumed to include the document endpoint<br />
+e.g ‘<a href="https://example.com/api/v2/database/example/JmJobList%E2%80%99">https://example.com/api/v2/database/example/JmJobList’</a></p>
+<h3 id="tip-url-encoding-of-special-characters-eg-and">TIP: URL encoding of special characters e.g. % and +</h3>
+<p>When using HTML special characters as part of the query value, they must be URL encoded.</p>
+<p>Example:  to use a wildcard query such as "<strong>%dave%"</strong>, the % needs substituting with <strong>%25</strong>.  Once URL encoded will look like this <strong>%25dave%25</strong></p>
+<p>Example GET query with URL encoded wildcard :</p>
+<p>{{server}}/MoMediaOrderList?query={"wo_desc":"<strong>%25dave%25</strong>"}&amp;resultcolumns={"L": ["wo_no", "wo_desc"]}</p>
+<p><em>(Specifically the reason why <strong>%dave%</strong> fails to return valid results it that <strong>%da</strong> is the encoding for the <strong>Ú</strong> character)</em></p>
+<p>This also applies to datetime values that use the offset attribute with the + sign.</p>
+<p>To include a value of "<strong>2023-06-01T09:00+5:00</strong>" in a URL query parameter, substitute + with <strong>%2b</strong></p>
+<p>Example:</p>
+<p>?query={"wo_begin_dt":{"$range":["2023-06-01T09:00<strong>%2b</strong>5:00","2023-06-01T17:00<strong>%2b</strong>5:00"]}}</p>
+<ul>
+<li><strong>String or Number</strong></li>
+</ul>
+<table><tbody><tr><td>Description&nbsp;</td><td>The value in returned items must match a specified string. The string<br>can either be letters or numbers. Wildcard ‘%’ can be used.&nbsp;</td></tr><tr><td>Syntax&nbsp;</td><td>“field”:” value”</td></tr><tr><td><p>Examples:</p></td><td><p><em>baseurl</em>?Query={“job_desc”:” Big Apple Live”}</p><p><em>baseurl</em>?Query={“job_desc”:”%Big%”}</p><p><em>baseurl</em>?Query={“job_no”:101101}</p></td></tr></tbody></table>
+
+<p>To specify multiple key/value pairs, separate each key/value pair with a comma:<br />
+<em>baseurl</em>?query={"cust_id":"123","job_type_no":"4"}<br />
+<em>baseurl</em>?query={"cust_id":"123","job_type_no":"4","active":"Y"}<br />
+Note: When specifying multiple key/value pairs, the API will return only items that match ALL specified criteria.</p>
+<ul>
+<li><strong>Range</strong></li>
+</ul>
+<table><tbody><tr><td>Description</td><td>&nbsp;The value in returned items must fall between a specified minimum<br>and maximum numeric value.</td></tr><tr><td>Syntax&nbsp;</td><td>“field”:{"$range":[lower_limit, upper_limit]}</td></tr><tr><td>Examples</td><td>baseurl?Query={“job_no”:{"$range":[100, 199]}}<br>baseurl?query={"wo_begin_dt":{"$range":["2023-12-01","2023-12-31"]}}<br>baseurl?query={"wo_begin_dt":{"$range":["2023-06-01T09:00","2023-06-<br>01T17:00"]}}</td></tr></tbody></table>
+
+<ul>
+<li><strong>In (Set)</strong></li>
+</ul>
+<table><tbody><tr><td>Description&nbsp;</td><td>The value in returned items must match one of the values provided in a given set of values.</td></tr><tr><td>Syntax&nbsp;</td><td>“field”:{"$in":[“value_1”,”value_2”, … ”value_n”]}</td></tr><tr><td>Examples&nbsp;</td><td>baseurl?Query={“job_no”:{"$in":[100, 105, 110, 119]}}</td></tr></tbody></table>
+
+<p><strong>TIP: Searching for multiple wildcard values</strong></p>
+<p>If you wanted to search for multiple wildcard values contained within a single field that all need to exist, then you can include a list of wildcard values.</p>
+<p>For example, if you wanted to search for media assets that have "Tale" AND "Dark" in their "master_desc" field, you can use the following query parameter:</p>
+<p>{"master_desc":{$in:["%Tale%Dark%","%Tale%Dark%"]}}</p>
+<p>Or with encoding of the % symbol (if using Postman) you need:</p>
+<p>{"master_desc":{$in:["%25Tale%25Dark%25","%25Tale%25Dark%25"]}}</p>
+<ul>
+<li><strong>Null / Empty</strong></li>
+</ul>
+<table><tbody><tr><td>Description&nbsp;</td><td>The value in returned items must be NULL. Note: Put pipe characters<br>around NULL to differentiate it from the literal string “NULL”.</td></tr><tr><td>Syntax&nbsp;</td><td>"field”: “|NULL|”&nbsp;</td></tr><tr><td>Examples&nbsp;</td><td>baseurl?Query={“phone_number”:{"|NULL|"}}</td></tr></tbody></table>
+
+<ul>
+<li><strong>NE (Not Equal)</strong></li>
+</ul>
+<table><tbody><tr><td>Description&nbsp;</td><td>The value in returned items must not match the specified number, string, or NULL.</td></tr><tr><td>Syntax&nbsp;</td><td>“field”:{"$ne":”value”}</td></tr><tr><td><p>Examples:<br>&nbsp;Not equal<br>&nbsp;Not null&nbsp;<br>&nbsp;Not like</p></td><td><p>baseurl?Query={"job_desc ":{"$ne":"Big Apple Live"}}<br>baseurl?Query={"cust_id":{"$ne":1001}}<br>baseurl?Query={"jm_phase_external_key":{"$ne":"|NULL|"}}<br>baseurl?Query={"wo_desc":{"$ne":"Test%"},"wo_type_no": 83}&nbsp;</p></td></tr></tbody></table>
+
+<p><strong>NULL Values</strong></p>
+<p>The Null parameter returns any record that has a null value for the specified key, which indicates that no value has ever been set. This differentiates it from an empty string for text-based or date-based properties, a 0 value for numbers, and true or false values for Boolean properties.</p>
+<p><strong>Note:</strong> Not all properties support null values. If possible, check whether the database column in the appropriate column allows nulls.</p>
+<p><strong>Keys</strong> are strings and generally match the column name from a given database table. It is<br />
+recommended to match the case of the key name as shown in the Swagger API documentation if possible.</p>
+<p><strong>Values</strong></p>
+<p>- String values are not case-sensitive.</p>
+<p>- DateTime values should be provided in a valid ISO date format.</p>
+<h2 id="resultcolumns-parameter"><strong>resultColumns parameter</strong></h2>
+<p>Used by the <strong>GET</strong> method on List and (v10.6) Maintenance endpoints.</p>
+<p>ResultColumns parameter is used to define the fields you wish to have returned in the response.<br />
+Without this parameter, the response will contain all document fields.</p>
+<p><em>For example:</em><br />
+{baseurl}/JmJobList?Query={"job_no":2}&amp;resultColumns={"L":["job_no","job_desc"]}</p>
+<p>Job No. and Job Description fields will be included in the response.<br />
+Important to include the “L” top-level element.</p>
+<p><strong>Sub-Table columns</strong></p>
+<p>Many endpoints include related sub-tables in their responses. Example syntax to include specific sub-table columns.</p>
+<p>Below example fetches a tranmission order description and all it's service row numbers:</p>
+<p>{base_url}/XmTransmissionOrder/wo_no_seq=7655-1?resultColumns={"jm_work_order":["wo_desc"],"mo_service_row":["service_row_no"]}</p>
+<p><em>Response:</em></p>
+<p>{</p>
+<p>"jm_work_order": [</p>
+<p>{</p>
+<p>"wo_desc": "WS Transmission Test",</p>
+<p>"mo_service_row": [</p>
+<p>{</p>
+<p>"service_row_no": {</p>
+<p>"service_row_no": 9933,</p>
+<p>"external_key": null</p>
+<p>}</p>
+<p>},</p>
+<p>{</p>
+<p>"service_row_no": {</p>
+<p>"service_row_no": 9934,</p>
+<p>"external_key": null</p>
+<p>}</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p><strong>Performance recomendation.</strong> Always use the ResultColumns parameter otherwise responses will return large numbers of fields most of which will not be required and only adds to the system perfromance overhead. In future API versions, this will become a mandatory parameter.</p>
+<h2 id="additional-parameters"><strong>Additional parameters</strong></h2>
+<h4 id="saveargument"><strong>saveArgument</strong></h4>
+<p>In some cases, you must also add a header with the SaveArgument parameter to trigger the app server to perform a function as part of an API call. For example, when creating a Work Order, to load a Work Order Template you must provide the wo_template_no value in the payload as well as set the SaveArguement header:</p>
+<p>LoadTemplate:<br />
+<strong>SaveArgument : {"LoadTemplate":"2"}</strong></p>
+<p>LoadServiceTemplate, loads a service template to a Media Order or a Transmission Order:</p>
+<p><strong>SaveArgument : {"LoadServiceTemplate":"10"}</strong></p>
+<p>BidApproval, changes the bid approval state of a Bid using an number that maps to the approval</p>
+<h4 id="saveargument-bidapproval0"><strong>SaveArgument : {"BidApproval":"0"}</strong></h4>
+<p>Approval number mapping:</p>
+<table><tbody><tr><td>0</td><td><span dir="ltr">Approval</span></td></tr><tr><td>1</td><td><span dir="ltr">Unapproval</span></td></tr><tr><td>2</td><td><span dir="ltr">ApproveAsChangeMemo</span></td></tr><tr><td>3</td><td><span dir="ltr">ApproveAndUnApproveOriginal</span></td></tr><tr><td>4</td><td><span dir="ltr">Abort</span></td></tr></tbody></table>
+
+<h4 id="alternatekeyhandling"><strong>alternatekeyhandling</strong></h4>
+<p>Suppresses additional key fields from the responses. If you do not need to work with key fields other than the primary key, use this parameter to keep the API call performant and reduce the processing overhead when not working with alternate key fields (v10.6).</p>
+<p>Applicable to all GET calls for List, Maintenance &amp; Report endpoints.</p>
+<p>Values are ‘<strong>ignore</strong>’ or ‘<strong>include</strong>’.</p>
+<p>Default value = ‘include’ (includes alternate keys in the response)</p>
+<p>Example:</p>
+<p><em>URL Parameter:- alternatekeyhandling:<strong>include</strong> (default)</em> </p>
+<p>{</p>
+<p>"L": [</p>
+<p>{</p>
+<p>"master_no": {</p>
+<p>"master_no": 915,</p>
+<p>"barcode": "MM915",</p>
+<p>"external_key": "VX-90",</p>
+<p>"umid": null</p>
+<p>},</p>
+<p>"cust_id": null,</p>
+<p>"company_name": null,</p>
+<p>"master_desc": null,</p>
+<p>"barcode": "MM915",</p>
+<p>...</p>
+<p><em>URL Parameter:- alternatekeyhandling:<strong>ignore</strong></em> </p>
+<p>{</p>
+<p>"L": [</p>
+<p>{</p>
+<p>"master_no": {</p>
+<p>"master_no": 915</p>
+<p>},</p>
+<p>"cust_id": null,</p>
+<p>"company_name": null,</p>
+<p>"master_desc": null,</p>
+<p>"barcode": "MM915",</p>
+<p>...</p>
+<p>Notice how the additional key fields barcode, external_key &amp; umid are not provided.</p>
+<p>It's recommended to always include this header with the value 'ignore', unless working with alternate keys.</p>
+<h4 id="nullvaluehandling"><strong>nullvaluehandling</strong></h4>
+<p>Suppresses all null value fields from the response. Using this parameter reduces the payload size dramatically, especially for larger queries (v10.6).</p>
+<p>Applicable to all GET calls for List, Maintenance &amp; Report endpoints.</p>
+<p>Values are ‘<strong>ignore</strong>’ or ‘<strong>include</strong>’.</p>
+<p>Default value = ‘include’ (includes null values in the response)</p>
+<p>Example:</p>
+<p><em>URL Parameter:- nullvaluehandling=<strong>include</strong> (default)</em> </p>
+<p>{</p>
+<p>"L": [</p>
+<p>{</p>
+<p>"master_no": {</p>
+<p>"master_no": 915,</p>
+<p>"barcode": "MM915",</p>
+<p>"external_key": "VX-90",</p>
+<p>"umid": null</p>
+<p>},</p>
+<p>"cust_id": null,</p>
+<p>"company_name": null,</p>
+<p>"master_desc": null,</p>
+<p>"barcode": "MM915",</p>
+<p>...</p>
+<p><em>URL Parameter:- nullvaluehandling=<strong>ignore</strong></em> </p>
+<p>{</p>
+<p>"L": [</p>
+<p>{</p>
+<p>"master_no": {</p>
+<p>"master_no": 915,</p>
+<p>"barcode": "MM915",</p>
+<p>"external_key": "VX-90"</p>
+<p>},</p>
+<p>"barcode": "MM915",</p>
+<p>...</p>
+<p>Notice how all null value fields are omitted.<br />
+It's recommended to always include this parameter with the value 'ignore', unless visibility of null values is required.</p>
+<h4 id="source-time-zone-name"><strong>Source-Time-Zone-Name</strong></h4>
+<p>The REST API uses Date time formats in ISO format with an optional offset value.</p>
+<p>e.g. 2014-11-03T22:20:00+00:00</p>
+<p>If you omit the offset value when using POST to create a record, you can use a header parameter to set the time zone your dates are using.<br />
+<strong>Key: Source-Time-Zone-Name                 Value: {Windows Time Zone name}</strong></p>
+<p>e.g. : header 'Source-Time-Zone-Name: Pacific Standard Time '</p>
+<p>Will create records using Pacific Standard Time as the time zone for the payload times.<br />
+Remember to omit the offset values in your time formats.</p>
+<h2 id="patch-using-post-payload"><strong>PATCH Using POST Payload</strong></h2>
+<p>There are two PATCH methods, one where you define the field and the operation, the other is to use the full POST JSON payload.</p>
+<p>To use the PATCH with the full JSON payload, you must include the header parameter:</p>
+<p><strong>'Content-Type: application/json-patch+json'</strong></p>
+<p>Example Job update (cURL format):</p>
+<p>curl --location --request PATCH</p>
+<p>'https: //{base_url}/api/v2/database/{database_name}/JmJob/job_no=345' \</p>
+<p>--header 'Content-Type: application/json-patch+json' \</p>
+<p>--header 'Authorization: Basic eHl0ZWNoOk1lZGlhMjwqNSE=' \</p>
+<p>--data '{</p>
+<p>"jm_job": [</p>
+<p>{</p>
+<p>"job_no": {</p>
+<p>"job_no": 345</p>
+<p>},</p>
+<p>"job_desc":"Leaves of October",</p>
+<p>"job_type_no": {</p>
+<p>"job_type_no": 7</p>
+<p>},</p>
+<p>"po": "PO1234",</p>
+<p>"job_reference": "Streets Ahead"</p>
+<p>}</p>
+<p>]</p>
+<p>}'</p>
+<p><strong>Notes:</strong></p>
+<p>The payload must include the existing primary key (job_no in the above example) as a URL parameter as well as in the body payload.</p>
+<p>The expected response status code for a successful PATCH is ‘204’ and there will be no response body.</p>
+<h2 id="patch-using-list-endpoints"><strong>PATCH using List endpoints</strong></h2>
+<p>List endpoints also support the PATCH method so that you can update multiple records using a query (see ‘GET – Query Parameters’ section above for details on available query parameters). This method is teh equilivant API functionality of Grid Update feature of the UI.<br />
+Example to update multiple jobs using the $in query parameter:</p>
+<p><strong>PATCH</strong> <em>{base_url}</em>/JmJobList?query={"job_no": {"$in": ["410","411"]}}</p>
+<p>[</p>
+<p>{</p>
+<p>"op": "replace",</p>
+<p>"path": "job_reference",</p>
+<p>"value": "These are not taxed"</p>
+<p>}</p>
+<p>]</p>
+<p>As with GET, wildcards ‘%’ are supported such as:</p>
+<p><strong>PATCH</strong> <em>{base_url}__/</em> JmJobList?Query={"job_desc": "Sport%"}</p>
+<h2 id="post-method"><strong>POST method</strong></h2>
+<p><strong>Mandatory Fields to Create New Items</strong></p>
+<p>The Swagger model identifies many fields as mandatory (nullable: false), which indicates that a value must be provided when the item is written to the database. However, in some cases, the business logic will provide default values, so it may not be strictly necessary to pass values for these fields to the API to create a new record. <br />
+For example, in a basic payload to create a Work Order, Swagger identifies at least 25 fields as mandatory, but the most basic payload to create a Work Order is below:</p>
+<p>{</p>
+<p>"jm_work_order": [</p>
+<p>{</p>
+<p>"external_key": "externalID",</p>
+<p>"wo_desc": "Match2",</p>
+<p>"wo_begin_dt": "2022-01-01T00:00",</p>
+<p>"wo_end_dt": "2022-01-01T06:00",</p>
+<p>"wo_type_no": 2,</p>
+<p>"phase_code": "Bid",</p>
+<p>"rate_card_no": 1,</p>
+<p>"cust_id": "6",</p>
+<p>"wo_template_no": "2"</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p>See other basic payload examples in the public <a href="https://helpcenter.xytechsystems.com/hc/en-us/articles/21789230412571-Media-Operations-Platform-REST-API-Reference-10-6#h_01HF433TKM2GMHVRE5CPR8X3X6">Postman Collection</a>.</p>
+<h2 id="custom-field-handling"><strong>Custom Field handling</strong></h2>
+<p>Any custom fields you have defined through document customization are automatically included in REST API payloads. The naming convention is a combination of the Custom Code you created plus the internal field name concatenated with an underscore. i.e. {customization code}_{field name}</p>
+<p><em>Document customization screen showing the Customnization Code</em></p>
+<p><img alt="" src="21932257951899.png" /></p>
+<p><em>Document customization screen showing the internal field names:</em></p>
+<p><img alt="2024-01-10_16-44-24.jpg" src="21932249626267.jpeg" /></p>
+<p><em>Response from a GET call to fetch a Work Order showing the payload custom fields:</em></p>
+<p><img alt="" src="21932257971867.png" /></p>
+<h2 id="appendix-a-endpoint-list"><strong>Appendix A – Endpoint List</strong></h2>
+<p>There are over 1000 individual documents (endpoints) available to the Platform’s REST API. Below is a small sample of those documents. The full list of available documents can be obtained directly from the Platform using the Document Customizations query found in the System module. Specific documentation on each document can be found via the Swagger site.</p>
+<table><tbody><tr><td><strong>ID&nbsp;</strong></td><td><strong>Class Name&nbsp;</strong></td><td><strong>Document Description&nbsp;</strong></td><td><strong>Document Type</strong></td></tr><tr><td>10315&nbsp;</td><td>JmJob&nbsp;</td><td>Job&nbsp;</td><td>Maintenance</td></tr><tr><td>315&nbsp;</td><td>JmJobList&nbsp;</td><td>Jobs&nbsp;</td><td>Select (List)</td></tr><tr><td>10317&nbsp;</td><td>JmJobStatus&nbsp;</td><td>Job Statuses&nbsp;</td><td>Setup</td></tr><tr><td>10318&nbsp;</td><td>JmJobTable1&nbsp;</td><td>Subscription&nbsp;</td><td>Setup</td></tr><tr><td>10322&nbsp;</td><td>JmJobType&nbsp;</td><td>Job Types&nbsp;</td><td>Setup</td></tr><tr><td>359&nbsp;</td><td>JmTrxReport&nbsp;</td><td>Transaction Reports&nbsp;</td><td>Select (List)</td></tr><tr><td>10339&nbsp;</td><td>JmWorkOrder</td><td>Work Order&nbsp;</td><td>Maintenance</td></tr><tr><td>10346&nbsp;</td><td>JmWoTransaction&nbsp;</td><td>Work Order Transactions&nbsp;</td><td>Maintenance</td></tr></tbody></table>
+
+<h2 id="appendix-b-swagger-examples"><strong>Appendix B – Swagger Examples</strong></h2>
+<p><img alt="" src="21789220498843.png" /></p>
+<p><img alt="" src="21789230406299.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
