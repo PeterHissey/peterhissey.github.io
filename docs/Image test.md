@@ -20,3 +20,18 @@ JSON test
     ]
 }
 ```
+
+JSON test
+```json
+{
+    "sys_phone_list": [
+        {
+         //   "list_id": "-1",
+            "external_key": "PH1001",
+            "list_type": "I",
+            "first_name": "User2",
+            "last_name": "Last2"
+        }
+    ]
+}
+```
