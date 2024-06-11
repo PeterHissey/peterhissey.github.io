@@ -17,3 +17,5 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         ...       # Other markdown pages, images and other files.
 
 ![[assets/Pasted image 20240611140817.png]]
+
+![alt text]([https://github.com/PeterHissey/docs/assets/Pasted image 20240611140817.png])
