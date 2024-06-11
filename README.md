@@ -1,10 +1,8 @@
 # peterhissey.github.io
 
-![](Pastedimage20240611193018.png)
-
 
 Pasted via obsidian
-![[assets/Pasted image 20240611194513.png]]
+![](assets/Pasted%20image%2020240611195326.png)
 
 
 Hand crafted:
@@ -12,3 +10,7 @@ Hand crafted:
 
 Dragged via VS Code
 ![alt text](<assets/Pasted image 20240611194513.png>)
+
+
+A Markdown link:
+![](assets/Pasted%20image%2020240611195226.png)
