@@ -1,4 +1,4 @@
 {
   "attachmentFolderPath": "./assets",
-  "newLinkFormat": "relative"
+  "newLinkFormat": "absolute"
 }
