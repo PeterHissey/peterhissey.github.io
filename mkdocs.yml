@@ -2,5 +2,3 @@ site_name: Peter's Doc Site
 site_url: https://peterhissey.github.io
 theme:
   name: material
-  hljs_languages:
-    - yaml
