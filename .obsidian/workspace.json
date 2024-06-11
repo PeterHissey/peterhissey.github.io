@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8188a7398a54d615",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Image test.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/Image test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/Image test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/index.md"
+                "file": "docs/Image test.md"
               }
             }
           }
@@ -146,8 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a64d64ba67404fc5",
+  "active": "8188a7398a54d615",
   "lastOpenFiles": [
+    "docs/assets/Pasted image 20240611162136.png",
+    "docs/index.md",
+    "docs/Image test.md",
     "docs/assets/Pasted image 20240611154444.png",
     "docs/assets/Pasted image 20240611142615.png",
     "docs/assets/Pasted image 20240611140817.png",
@@ -155,7 +171,6 @@
     "docs/Pasted image 20240611134012.png",
     "README.md",
     "Pasted image 20240611133920.png",
-    "docs/index.md",
     "Pasted image 20240611133858.png"
   ]
 }
